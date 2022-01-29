@@ -55,9 +55,11 @@ console.log(summedPrice)
     decimals, for example: .06 for a 6% tax.
 */
 
-const cart = ("cartTotal", "couponValue", "tax")
+const cartFinalPrice = ("cartTotal", "couponValue", "tax") 
+    return cartTotal * (1 + tax) - couponValue
 
-const calcFinalPrice()
+
+console.log(calcFinalPrice(10, 2, .06))
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -96,9 +98,9 @@ const calcFinalPrice()
 //CODE HERE
 const order = [
 {
-    name: "Lonna Barlow"
-    phone: 123-4567
-    zip: 12345
+    name: "Lonna Barlow",
+    phone: 123-4567,
+    zip: 12345,
     store: 348
 }
 ]

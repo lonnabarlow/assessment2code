@@ -31,6 +31,16 @@
 */
 
 //CODE HERE
+const pizza = [
+ {
+    name: "cheese",
+    price: 8,
+    category: "main dish",
+    popularity: 10,
+    rating: 9,
+    tags: [ "pizza", "dinner", "kids", "favorites", "yum"]
+ } 
+]
 
 
 
@@ -43,6 +53,7 @@
 */
 
 //CODE HERE
+console.log(pizza.popularity)
 
 
 /*
@@ -53,6 +64,7 @@
 */
 
 //CODE HERE
+// console.log(pizza.tags[1])
 
 
 /*
@@ -63,6 +75,8 @@
 */
 
 //CODE HERE
+let {price} = pizza
+
 
 
 /*
@@ -73,6 +87,7 @@
 */
 
 //CODE HERE
+const {category} = pizza
 
 
 //////////////////PROBLEM 3////////////////////
@@ -88,6 +103,51 @@
 */
 
 //CODE HERE
+const foodArr = [
+    {
+       name: "cheese",
+       price: 8,
+       category: "main dish",
+       popularity: 10,
+       rating: 9,
+       tags: [ "pizza", "dinner", "kids", "favorites", "yum"]
+    }, 
+    {
+        name: "supreme",
+        price: 15,
+        category: "main dish",
+        popularity: 10,
+        rating: 9,
+        tags: [ "pizza", "dinner", "dads", "favorites", "spicy"]
+    }, 
+    {
+        name: "BBQ",
+        price: 12,
+        category: "main dish",
+        popularity: 9,
+        rating: 8,
+        tags: [ "pizza", "dinner", "dads", "favorites", "filling"]   
+    }, 
+    {
+        name: "Philly",
+        price: 15,
+        category: "main dish",
+        popularity: 9,
+        rating: 10,
+        tags: [ "pizza", "dinner", "adults", "flavorful", "yum"]
+    },
+    
+    {
+        name: "meat lovers",
+        price: 18,
+        category: "main dish",
+        popularity: 8,
+        rating: 7,
+        tags: [ "pizza", "dinner", "dads", "filling", "spicy"]
+    }
+
+]
+
 
 
 
@@ -105,7 +165,9 @@
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filteredFood = foodArr.filter(tags(tags.includes["filling"]))
+
+console.log(filteredFood)
 
 
 

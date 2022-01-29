@@ -66,4 +66,4 @@ const firstTicket = new Ticket(["pizza", "bread", "soda","7:03PM", 575])
 */
 
 //CODE HERE
-firstTicket(updateStatus)
+firstTicket(updateStatus("cooking"))
