@@ -31,7 +31,7 @@
 */
 
 //CODE HERE
-const pizza = [
+const pizza = 
  {
     name: "cheese",
     price: 8,
@@ -40,7 +40,7 @@ const pizza = [
     rating: 9,
     tags: [ "pizza", "dinner", "kids", "favorites", "yum"]
  } 
-]
+
 
 
 
@@ -53,7 +53,7 @@ const pizza = [
 */
 
 //CODE HERE
-console.log(pizza.popularity)
+console.log(pizza.popularity);
 
 
 /*
@@ -64,7 +64,7 @@ console.log(pizza.popularity)
 */
 
 //CODE HERE
-// console.log(pizza.tags[1])
+console.log(pizza.tags[1])
 
 
 /*
@@ -76,7 +76,7 @@ console.log(pizza.popularity)
 
 //CODE HERE
 let {price} = pizza
-
+// console.log(price)
 
 
 /*
@@ -88,7 +88,7 @@ let {price} = pizza
 
 //CODE HERE
 const {category} = pizza
-
+console.log(category)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -165,8 +165,11 @@ const foodArr = [
 
 //CODE HERE
 
-const filteredFood = foodArr.filter(tags(tags.includes["filling"]))
-
+const filteredFood = foodArr.filter((element) => {
+    if (element.tags.includes("filling")) {
+        return element;
+    }
+});
 console.log(filteredFood)
 
 
@@ -211,6 +214,18 @@ console.log(filteredFood)
 */
 
 //CODE HERE
+const filterByProperty = (property, number, type) =>{
+    const filteredFood = foodArr.filter((element) => {
+        if (type === "above"){
+            return element[property] >= number
+        }else if(type === "below"){
+            return element[property] <= number
+        }
+    })
+    return filteredFood
+}
+
+// console.log(filterByProperty ("rating", 8, "above"))
 
 
 /*
@@ -221,3 +236,4 @@ console.log(filteredFood)
 */
 
 //CODE HERE
+console.log(filterByProperty ("rating", 8, "above"))
